@@ -1,0 +1,88 @@
+<html>
+
+    <style>
+    
+input[type="button"]
+        {
+            width: 50px;
+            border-radius: 5px;
+            height: 30px;
+            margin-top: 20px;
+            text-align: center;
+            color: red;
+            font-size: 15px;
+            outline: none;
+            border: 1px red dotted;;
+        }
+    input[type="text"]
+        {
+            height: 30px;
+            margin-top: 20px;
+            text-align: center;
+            color: red;
+            font-size: 20px;
+            outline: none;
+            border: 1px red dotted;;
+        }
+    input[type="text"]:focus
+        {
+            background-color: antiquewhite;
+        }
+
+    </style>
+<script type="application/javascript">
+    
+  function doJoin()
+    {
+        //var name=document.frm.txtName.value;//value is a variable of type string
+        //alert("Hello:"+name);
+        
+        var fn=document.getElementById("txtFN").value;
+        var ln=document.getElementById("txtLN").value;
+        var full=fn+" "+ln;
+        document.getElementById("txtFull").value=full;
+    }
+
+/*
+    function doSum()
+    {
+        var x="23.4";
+        var y="3.2";
+        var sum=x+y;//string+string
+        alert(sum);
+        
+        var sumint=parseint(x)+parseint(y);
+        alert("Integers:"+sumint);
+        
+        var sumfloat=parseFloat(x)+parseFloat(y);
+        alert("Floats:"+sumfloat);
+        
+        
+        
+    }
+*/
+</script>
+<center>
+
+    <body>
+
+        
+        <form>
+        F.Name :<input type="text" id="txtFN" placeholder="fill ur name" autofocus ><br>
+        L.Name :<input type="text" id="txtLN" placeholder="fill ur last name"  ><br>
+        
+            <input type="button" value="Join" onclick="doJoin();">
+        <br>
+            Full Name :<input type="text" id="txtFull" ><br>
+            
+ 
+        </form>
+
+        <hr>
+        <form>
+        <input type="button" value="Sum" onclick="doSum();">
+        </form>
+    </body>
+</center>
+
+</html>

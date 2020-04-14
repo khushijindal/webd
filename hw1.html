@@ -1,0 +1,137 @@
+<html>
+<script type="application/javascript">
+    function doSum() 
+    {
+        SUM = parseInt(document.getElementById("english").value) + parseInt(document.getElementById("maths").value) + parseInt(document.getElementById("science").value);
+        if(isNaN(SUM))
+            document.getElementById("Total").value="fill valid data";
+        document.getElementById("Total").value = SUM;
+    }
+
+    function doPer() {
+        PERCENTAGE = parseInt(SUM) / 3;
+        document.getElementById("Per").value = PERCENTAGE;
+    }
+
+    function doGrading() {
+        var GRADE;
+        if (parseInt(PERCENTAGE) >= 90)
+            GRADE = "A";
+        else if (80 <= parseInt(PERCENTAGE) && parseInt(PERCENTAGE)< 90)
+            GRADE = "B";
+        else if (70 <= parseInt(PERCENTAGE) && parseInt(PERCENTAGE)< 80)
+            GRADE = "C";
+        document.getElementById("Grade").value = GRADE;
+    }
+    function chkEnglish()
+        {
+            var e=document.getElementById("english").value;
+            if(e=="")
+                document.getElementById("errE").innerHTML="Fill Marks";
+            else
+                if(isNaN(e))
+                document.getElementById("errE").innerHTML="Fill Numeric plz";
+            else
+                document.getElementById("errE").innerHTML="OK";
+
+        }
+    
+    function chkMaths()
+    { 
+        var m=document.getElementById("maths").value;
+        
+        
+        if(m=="") 
+            document.getElementById("errM").innerHTML="Fill marks";
+     else 
+         if(isNaN(m))
+             document.getElementById("errM").innerHTML="Fill Numeric plz";
+     else
+         document.getElementById("errM").innerHTML="OK";
+    
+    }
+    function chkScience()
+    {
+        var s=document.getElementById("science").value;
+        if(s=="") 
+            document.getElementById("errS").innerHTML="Fill marks";
+     else 
+         if(isNaN(s))
+             document.getElementById("errS").innerHTML="Fill Numeric plz";
+     else
+         document.getElementById("errS").innerHTML="OK";
+    
+    }
+</script>
+
+<head>
+    <title>My table</title>+
+
+    <style>
+        tr{
+          line-height: 30px;  
+        }
+    
+    </style>
+    </head>
+
+    
+<body>
+    <form name="frm" >
+        <table border="1" width="500" rules="rows">
+            <tr>
+                <td>
+                    ENGLISH:
+                    <input type="text" onblur="chkEnglish();" id="english" placeholder="fill ur marks" autofocus>
+                    <span id="errE">*</span>
+                        
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    MATHS:
+                    <input type="text" onblur="chkMaths();" id="maths" placeholder="fill ur marks">
+<span id="errM">*</span></td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    SCIENCE:
+                    <input type="text" onblur="chkScience();" id="science" placeholder="fill ur marks"><span id="errS">*</span></td>
+            </tr>
+
+            <tr>
+                <td>
+                    OPERATION:
+
+                    <input type="button" value="sum" onclick="doSum();">
+
+                    <input type="button" value="percentage" onclick="doPer();">
+
+                    <input type="button" value="grade" onclick="doGrading();"></td>
+            </tr>
+
+            <tr>
+                <td>
+                    Total:
+                    <input type="text" id="Total"></td>
+            </tr>
+            <tr>
+                <td>
+                    Percentage:
+                    <input type="text" id="Per"></td>
+            </tr>
+            <tr>
+                <td>
+                    Grade:
+                    <input type="text" id="Grade"></td>
+            </tr>
+
+
+        </table>
+    </form>
+</body>
+
+</html>

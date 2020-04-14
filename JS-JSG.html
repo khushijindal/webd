@@ -1,0 +1,72 @@
+<html>
+
+<script type="application/javascript">
+    function doAlert() 
+    {
+        alert("Hello");
+    }
+
+ function doClick2() 
+    {
+        var resp = confirm("R U Sure"); //true/false
+        //alert(resp);
+        if(resp==true)
+            alert("Hello");
+        else
+            alert("Hi");
+    }
+
+    function getOtp()
+    {
+        var val=prompt("Enter Otp:");//it returns string
+        alert(val);
+        
+    }
+    
+  function doHello()
+    {
+        var name=document.frm.txtName.value;//value is a variable of type string
+        alert("Hello:"+name);
+    }
+
+    function doSum()
+    {
+        var x="23.4";
+        var y="3.2";
+        var sum=x+y;//string+string
+        alert(sum);
+        
+        var sumint=parseInt(x)+parseInt(y);
+        alert("Integers:"+sumint);
+        
+        var sumfloat=parseFloat(x)+parseFloat(y);
+        alert("Floats:"+sumfloat);
+        
+        
+        
+    }
+</script>
+<center>
+
+    <body>
+
+            <input type="button" value="alert" onclick="doAlert();">
+            <input type="button" value="confirm" onclick="doClick2();">
+            <input type="button" value="prompt" onclick="getOtp();">
+
+        <hr>
+        
+        <form name="frm">
+        Name :<input type="text" name="txtName" placeholder="fill ur name" autofocus ><br>
+        <input type="button" value="Hello" onclick="doHello();">
+ 
+        </form>
+
+        <hr>
+        <form>
+        <input type="button" value="Sum" onclick="doSum();">
+        </form>
+    </body>
+</center>
+
+</html>
