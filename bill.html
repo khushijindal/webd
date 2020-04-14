@@ -1,0 +1,117 @@
+<html>
+
+<head>
+    <title>ELECTRICITY BILL</title>
+    <script type="application/javascript">
+        function calbill() {
+            units = document.getElementById("units").value;
+            if (units <= 500) {
+                u = (5 * parseFloat(units));
+                document.getElementById("unitsbill").value = u;
+            } else
+                document.getElementById("unitsbill").value = (10 * parseFloat(units));
+            
+            document.getElementById("loadbill").value = 100 * document.getElementById("load").value;
+            
+            document.getElementById("fanbill").value = 50 * document.getElementById("fan").value;
+            
+            
+            document.getElementById("acbill").value = 100 * document.getElementById("ac").value;
+            
+            document.getElementById("total").value = parseInt(document.getElementById("unitsbill").value) + parseInt(document.getElementById("loadbill").value) + parseInt(document.getElementById("fanbill").value) + parseInt(document.getElementById("acbill").value);
+            
+            document.getElementById("discount").value = (document.getElementById("total").value) / 10;
+            
+            document.getElementById("net").value = parseFloat(document.getElementById("total").value) - parseFloat(document.getElementById("discount").value);
+            
+        }
+
+    </script>
+</head>
+
+
+<BODY>
+    <center>
+        <form>
+
+            <table border=2>
+                <tr>
+                    <center>ELECTRICITY BILL
+                        <hr>
+                    </center>
+
+                </tr>
+                <tr>
+                    <td>
+                        UNITS:
+                        <input type="text" id="units" placeholder="enter units" autofocus></td>
+                </tr>
+                <tr>
+                    <td>
+                        LOAD:
+                        <input type="text" id="load" placeholder="enter load">KW</td>
+                </tr>
+                <tr>
+                    <td>
+                        FAN:
+                        <input type="text" id="fan" placeholder="enter no of fans"></td>
+                    <td> AC:
+                        <input type="text" id="ac" placeholder="enter no of ac">
+                    </td>
+                </tr>
+                <tr>
+
+                    <td colspan="2" align="center">
+                        <input type="button" value="BILL" onclick="calbill();"></td>
+
+                </tr>
+                <tr>
+                    <td>
+                        UNITS BILL:
+                        <input type="text" id="unitsbill"></td>
+                </tr>
+                <tr>
+                    <td>
+                        LOAD BILL:
+                        <input type="text" id="loadbill"></td>
+                </tr>
+                <tr>
+                    <td>
+                        FAN BILL:
+                        <input type="text" id="fanbill"></td>
+                </tr>
+                <tr>
+                    <td>
+                        AC BILL:
+                        <input type="text" id="acbill"></td>
+
+                    <td>
+                        TOTAL:
+                        <input type="text" id="total"></td>
+
+                </tr>
+                <tr>
+                    <td>
+                        DISCOUNT:
+                        <input type="text" id="discount"></td>
+                </tr>
+                <tr>
+                    <td>
+                        NET:
+                        <input type="text" id="net"></td>
+                </tr>
+
+
+            </table>
+        </form>
+
+    </center>
+</BODY>
+
+
+
+
+
+
+
+</html>
