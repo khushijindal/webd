@@ -1,0 +1,93 @@
+<html>
+    <script type="application/javascript">
+    function putt(dgt) {
+        document.getElementById("txt").value += dgt;
+    }
+
+    function equate() {
+        var res = eval(document.getElementById("txt").value);
+        document.getElementById("txt").value = res;
+    }
+</script>
+<style>
+    .tbl
+    {
+        border: 1px black solid;
+        padding: 20px;
+    }
+    input[type="button"]
+    {
+        padding:10px;
+    }
+    </style>
+
+<head>
+    <title>Calculator</title>
+</head>
+
+<body>
+    <form>
+        <table class="tbl">
+            <tr>
+                <td>
+                    <input type="text" id="txt">
+                    <input type="reset" value="C"></td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <input type="button" value="1" onclick="putt('1');">
+                    <input type="button" value="2" onclick="putt('2');">
+                    <input type="button" value="3" onclick="putt('3');">
+                    <input type="button" value="+" onclick="putt('+');">
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <input type="button" value="4" onclick="putt('4');">
+                    <input type="button" value="5" onclick="putt('5');">
+                    <input type="button" value="6" onclick="putt('6');">
+                    <input type="button" value="-" onclick="putt('-');">
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <input type="button" value="7" onclick="putt('7');">
+                    <input type="button" value="8" onclick="putt('8');">
+                    <input type="button" value="9" onclick="putt('9');">
+                    <input type="button" value="*" onclick="putt('*');">
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <input type="button" value="0" onclick="putt('0');">
+                    <input type="button" value="." onclick="putt('.');">
+                    <input type="button" value="=" onclick="equate();">
+                    <input type="button" value="/" onclick="putt('/');">
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
