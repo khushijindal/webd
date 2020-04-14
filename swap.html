@@ -1,0 +1,24 @@
+<html><script type="application/javascript">
+    function swap()
+    {
+      var temp;
+        temp=document.getElementById("pic1").src;
+       document.getElementById("pic1").src=document.getElementById("pic2").src; 
+        document.getElementById("pic2").src=temp;
+        
+    }
+    </script>
+<head>
+    <title>SWAP</title>
+</head>
+
+<BODY><center><form>
+    <TABLE>
+        <TR>
+            <TD><img src="../Pic/Sun.jpg" id="pic1" onclick="swap();"></TD>
+            <TD>
+                <img src="../Pic/download.jpg" id="pic2" onclick="swap();"></TD>
+        </TR>
+    </TABLE></form></center>
+</BODY>
+</html>

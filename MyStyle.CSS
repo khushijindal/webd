@@ -1,0 +1,49 @@
+
+#h1
+{
+    color: forestgreen;
+    text-align: center;
+    text-decoration: none;
+    text-transform: lowercase;
+}
+#p4
+{
+    text-align: center;
+   width: 200px;
+    height:200px;
+   
+    font-size: 20px;
+    font-weight: 1000;
+}
+#p5
+{
+    text-transform: "inherit";
+     font-family: cursive;
+    line-height: 2;
+    letter-spacing: 20;
+    word-spacing: 10px;
+     font-size: 20px;
+    border-style: solid;
+    border-width: medium;
+    border-radius: 40px;
+    border-left-style: dashed;
+    border-top-color: firebrick;
+    border-color: forestgreen;
+    text-shadow: 5px 5px 5px blue;
+    margin-top: 60px;
+    padding: 40px;
+}
+
+#btn:hover
+{
+    box-shadow: 0px 0px 25px blue;
+    transition: ease all 1s;
+}
+a
+{
+    text-decoration: none;
+}
+#mod
+{
+    
+}
